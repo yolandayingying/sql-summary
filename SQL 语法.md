@@ -34,6 +34,7 @@
     * [二十一、事务管理](#二十一事务管理)
     * [二十二、字符集](#二十二字符集)
     * [二十三、权限管理](#二十三权限管理)
+    * [二十四、窗口函数](#二十四窗口函数)
     * [参考资料](#参考资料)
 <!-- GFM-TOC -->
 
@@ -776,6 +777,22 @@ REVOKE SELECT, INSERT ON mydatabase.* FROM myuser;
 
 ```sql
 SET PASSWROD FOR myuser = Password('new_password');
+```
+
+
+## 二十四、窗口函数
+
+窗口函数的基本语法如下：
+
+<窗口函数> over (partition by <用于分组的列名>
+                order by <用于排序的列名>)
+专用窗口函数，包括后面要讲到的rank, dense_rank, row_number等专用窗口函数。
+
+```sql
+select *,
+   rank() over (partition by 班级
+                 order by 成绩 desc) as ranking
+from 班级表;
 ```
 
 ## 参考资料
