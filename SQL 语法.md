@@ -81,7 +81,12 @@ CREATE TABLE mytable (
   # 设置主键为 id
   PRIMARY KEY (`id`));
 ```
-
+请你创建一个actor_name表，并且将actor表中的所有first_name以及last_name导入该表.
+actor_name表结构如下：
+```sql
+create table actor_name
+select first_name,last_name from actor;
+```
 ## 三、修改表
 
 添加列
