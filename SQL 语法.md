@@ -112,7 +112,11 @@ DROP TABLE mytable;
 INSERT INTO mytable(col1, col2)
 VALUES(val1, val2);
 ```
-
+如果不存在则插入，如果存在则忽略
+```sql
+INSERT INTO mytable(col1, col2)
+VALUES(val1, val2);
+```
 插入检索出来的数据
 
 ```sql
