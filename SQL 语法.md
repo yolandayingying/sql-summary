@@ -35,6 +35,7 @@
     * [二十二、字符集](#二十二字符集)
     * [二十三、权限管理](#二十三权限管理)
     * [二十四、窗口函数](#二十四窗口函数)
+    * [二十五、索引](#二十五索引)
     * [参考资料](#参考资料)
 <!-- GFM-TOC -->
 
@@ -804,6 +805,17 @@ select *,
 from 班级表;
 ```
 
+## 二十五、索引
+
+索引的基本语法如下：
+
+1 创建索引
+
+```sql
+creat [UNIQUE][FULL TEXT][SPATIAL] INDEX index_name
+[USING index_type]
+on tbl_name(index_col_name,....;
+```
 ## 参考资料
 
 - BenForta. SQL 必知必会 [M]. 人民邮电出版社, 2013.
